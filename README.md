@@ -3,22 +3,6 @@
 Library for Interfacing with the LC29H Module
 
 
-## LC29X Querying Antenna Information ##
-This chapter explains PQTM messages (proprietary NMEA messages defined by Quectel) supported by LC29H and LC79H modules.
-
- ### Antenna Queries ###
-    PQTMANTENNASTATUS - Queries antenna status.
-    $PQTMANTENNASTATUS,<Status>,<Mode_ind> <Power_ind>*<Checksum><CR><LF>
-    Example: $PQTMANTENNASTATUS,0,0,0*4F
-
-     PQTMCFGANTENNA - Configures/queries antenna operation mode.
-    $PQTMCFGANTENNA,<R/W>,<Mode>*<Checksum><CR><LF>
-    Set antenna to auto mode: $PQTMCFGANTENNA,1,0*04
-        Response: $PQTMCFGANTENNAOK*1
-    Query antenna operation mode: $PQTMCFGANTENNA,0*19
-        Response: $PQTMCFGANTENNA,0,0*5
-
-
 ## LC29X PAIR Query & Response Information ##
 This chapter explains PAIR messages (proprietary NMEA messages defined by the chipset supplier). “P” means proprietary message, “AIR” means the command defined by the chipset supplier.
 
