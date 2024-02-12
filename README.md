@@ -22,23 +22,6 @@ This chapter explains PQTM messages (proprietary NMEA messages defined by Quecte
 ## LC29X PAIR Query & Response Information ##
 This chapter explains PAIR messages (proprietary NMEA messages defined by the chipset supplier). “P” means proprietary message, “AIR” means the command defined by the chipset supplier.
 
-### EXAMPLE PAIR ACKNOWLEDGEMENT RESPONSE ###
-    Packet Type: 001 PAIR_ACK
-    Details:
-        Acknowledges a PAIR command. An acknowledgement packet PAIR_ACK is returned to inform the sender that the receiver has received the packet.
-    Synopsys:
-        $PAIR001,<Command_ID>,<Result>*<Checksum><CR><LF>
-    Example: 
-        $PAIR001,002,0*39,
-
-    Result Information:
-        0 = The command has been successfully sent
-        1 = The command is being processed. Please wait for the result 
-        2 = Command sending failed
-        3 = The command ID is not supported
-        4 = Command parameter error. Out of range/some parameters were lost/checksum error
-        5 = The MNL service is busy
-
 
 ### PAIR COMMANDS ###
 Refer to Quectel LC29H documentation. Here are some examples below:
